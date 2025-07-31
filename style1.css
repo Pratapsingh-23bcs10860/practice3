@@ -1,0 +1,92 @@
+/* Make full height layout */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Layout container */
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Main body area (sidebar + content) */
+.container {
+    display: flex;
+    flex: 1;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #f0f0f0;
+    width: 200px;
+    padding: 20px;
+}
+
+.sidebar ul {
+    list-style-type: disc;        /* ✅ Show bullet points */
+    padding-left: 20px;           /* ✅ Indent bullets */
+    margin: 0;
+}
+
+.sidebar ul li a {
+    text-decoration: underline;   /* ✅ Show underlines */
+    color: #333;
+}
+
+/* Main content */
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #fff;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Dark Mode Styles */
+.dashboard.dark {
+    background-color: #1e1e1e;
+    color: #ddd;
+}
+
+.dashboard.dark header {
+    background-color: #222;
+    color: #ddd;
+}
+
+.dashboard.dark .sidebar {
+    background-color: #2a2a2a;
+}
+
+.dashboard.dark .sidebar ul li a {
+    color: #aaa;
+    text-decoration: underline;
+}
+
+.dashboard.dark .main-content {
+    background-color: #121212;
+    color: #ddd;
+}
+
+.dashboard.dark footer {
+    background-color: #222;
+}
